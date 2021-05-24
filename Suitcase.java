@@ -12,6 +12,36 @@ public class Suitcase {
         
     }
 
+    public void printThings(){
+        for(Thing thing: things){
+            System.out.println(thing);
+        }
+    }
+
+    public int totalWeight(){
+
+        int total = 0;
+
+        for(Thing thing: things){
+            total += thing.weight; 
+        }
+
+        return total; 
+    }
+
+    public Thing heaviestThing(){
+        Thing heaviest = null;
+        if (things.size() > 0) {
+            heaviest = things.get(0);
+            for (Thing thing : things) {
+                if (heaviest.getWeight() < thing.getWeight()) {
+                    heaviest = thing;
+                }
+            }
+        }
+        return heaviest;
+    }
+
     public void addThing(Thing thing){
         int checkWeight = maxWeight;
         
