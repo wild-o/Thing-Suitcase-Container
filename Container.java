@@ -19,6 +19,14 @@ public class Container {
             currentWeight += suitcase.totalWeight();
         }
     }
+    
+    public void printThings(){
+
+        for(Suitcase contents: cases){
+            contents.printThings();
+        }
+
+    }
 
     public String toString(){
         String output = "";
