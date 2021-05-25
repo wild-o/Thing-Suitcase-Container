@@ -23,7 +23,7 @@ public class Suitcase {
         int total = 0;
 
         for(Thing thing: things){
-            total += thing.weight; 
+            total += thing.getWeight(); 
         }
 
         return total; 
